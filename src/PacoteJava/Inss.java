@@ -33,11 +33,10 @@ public class Inss {
                 inss = 354.07;
             }
         }
-            JOptionPane.showMessageDialog(null, "Seu salario liquido é: " + nSalario + "\n"
-                    + "Sua aliquota é: " + aliquota + "\n"
-                            + "Seu INSS é: " + inss);
-
-        
-    
+            JOptionPane.showMessageDialog(null,"Salario:" + salario + " R$ \n"
+                    + "Aliquota: " + aliquota + " % \n"
+                    + "Desconto: " + inss + " R$ \n"
+                    +"Salario liquido: " + nSalario + " R$ \n");
+                    
             }
 }
