@@ -6,6 +6,8 @@ public class Imc {
         double peso = 0; double altura = 0; double imc = 0; 
         String aux = ""; String mensagem = "";
         
+        try{
+           
         aux = JOptionPane.showInputDialog(null,"Digite seu peso: ");
         peso = Double.parseDouble(aux);
         
@@ -42,6 +44,13 @@ public class Imc {
         JOptionPane.showMessageDialog(null,"Seu imc é: " + imc + "\n"
                 + mensagem );
         
-        
+        }
+            catch (NumberFormatException erro) {
+    
+        JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numericos");
+                main(args);
+    }
+
+    System.exit(0);
     }
 }

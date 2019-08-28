@@ -9,7 +9,8 @@ public class EntradaComJOptionpane {
     try{
         aux = JOptionPane.showInputDialog(null, "Entre com a nota 1");
         nota1 = Double.parseDouble(aux);
-        
+
+            
         aux = JOptionPane.showInputDialog(null, "Entre com a nota 2");
         nota2 = Double.parseDouble(aux);
         
@@ -20,9 +21,12 @@ public class EntradaComJOptionpane {
         JOptionPane.showMessageDialog(null, "Media : " + media);
     }
     catch (NumberFormatException erro) {
-        
-        JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numericos"+ erro.toString());
+    
+        JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numericos");
+            main(args);
     }
+    
     System.exit(0);
 }
-}
+        
+    }

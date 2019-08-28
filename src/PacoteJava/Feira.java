@@ -4,6 +4,9 @@ import javax.swing.JOptionPane;
 
 public class Feira {
     public static void main(String[] args) {
+        try{
+            
+        
         String st = null;
         String a;
         int escolha;
@@ -34,5 +37,12 @@ public class Feira {
                           
                           JOptionPane.showMessageDialog(null, "Você escolheu: " + st);
     }
+        catch (NumberFormatException erro) {
     
+        JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numericos"+ erro.toString());
+    }
+
+    System.exit(0);
+    
+}
 }

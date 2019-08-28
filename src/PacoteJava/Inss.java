@@ -8,6 +8,7 @@ public class Inss {
         double salario = 0; double nSalario = 0; double inss = 0;
         double aliquota = 0;
         String aux;
+        try{
         aux = JOptionPane.showInputDialog(null, "Digite seu salario e calcule seu inss");
         salario = Double.parseDouble(aux);
         
@@ -33,10 +34,19 @@ public class Inss {
                 inss = 354.07;
             }
         }
+        
             JOptionPane.showMessageDialog(null,"Salario:" + salario + " R$ \n"
                     + "Aliquota: " + aliquota + " % \n"
                     + "Desconto: " + inss + " R$ \n"
                     +"Salario liquido: " + nSalario + " R$ \n");
                     
             }
+    catch (NumberFormatException erro) {
+    
+        JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numericos");
+    }
+
+    System.exit(0);
+    }
+    
 }
