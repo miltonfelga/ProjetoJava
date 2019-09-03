@@ -2,6 +2,8 @@
 package PacoteJava;
 
 import javax.swing.JOptionPane;
+import PacoteJava.Responder;
+import PacoteJava.Operacoes;
 
 public class Entrada {
     public static void main(String[] args) {
@@ -19,6 +21,11 @@ public class Entrada {
                 + "4- divisao \n");
         escolha = Integer.parseInt(aux);
         
+        if (escolha >4){
+            JOptionPane.showMessageDialog(null,"Digite um número valido");
+            Entrada.main(args);
+        }
+        
         aux = JOptionPane.showInputDialog(null, "Digite um valor: ");
         v1 = Double.parseDouble(aux);
         
@@ -31,12 +38,16 @@ public class Entrada {
                 case 3 : st = "Multiplicação"; break;
                 case 4 : st = "Divisão"; break;
                 default: st = "Inexistente";
+
         }
+        Responder.responder(v1, v2, escolha);
+        
             
     }
     catch (NumberFormatException erro) {
     
-        JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numericos"+ erro.toString());
+        JOptionPane.showMessageDialog(null, "Houve erro na conversão, digite apenas caracteres numericos");
+        main(args);
     }
     
 }
