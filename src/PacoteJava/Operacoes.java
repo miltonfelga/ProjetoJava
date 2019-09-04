@@ -1,6 +1,5 @@
 
 package PacoteJava;
-import PacoteJava.Entrada;
 public class Operacoes {
 
     public static double soma (double v1, double v2){
